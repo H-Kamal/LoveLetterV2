@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+{% load staticfiles %}
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Heart Broken</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <title>LoveMessenger</title>
+
+     <style>
+        body {
+          margin: 0;
+          font-family: Arial, Helvetica, sans-serif;
+          background-color: #e71864;
+        }
+
+        .name {
+            position: revert;
+            font-family: "Playfair Display", serif;
+            background-color: #e71864;
+            color: white;
+            padding: 5px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 1px 16px 0px rgba(0,0,0,0.2);
+            padding: 6px 8px;
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+            padding-right: 0px;
+        }
+
+        .logo {
+            text-align: center;
+            margin-top: 135px;
+        }
+
+        .error {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 2em;
+            padding-left:16px;
+            color: #f9f9f9;
+            padding-top: 200px;
+            padding-bottom: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="logo">
+        <img src="{% static "image/broken heart Vector.png" %}" alt="There's plenty of URLS in the sea" height="200">
+    </div>
+
+    {% comment %}<div>
+            <h1>LoveMessenger</h1>
+            <form action = "submit" method="post"> {% csrf_token %}
+                <input type="text" name ="email">
+                <input type = "submit" value = "submit">
+            </form>
+        <h2> Please enter a valid email</h2>
+    </div>{% endcomment %}
+
+    <div class="dropdown">
+      <button class="name">Meet the Creators</button>
+      <div class="dropdown-content">
+          <p><a href="https://www.linkedin.com/in/michael-chang-438349157/">Michael Chang</a></p>
+          <p><a href="https://github.com/OpkarGhadu">Opkar Ghadu</a></p>
+          <p><a href="https://www.linkedin.com/in/hamzakamal/">Hamza Kamal</a></p>
+          <p><a href="https://www.linkedin.com/in/michael-zaghi-67428043/">Michael Zaghi</a></p>
+      </div>
+    </div>
+
+    <div class ="error">
+        Please enter a correct email address
+    </div>
+
+    <div class="container">
+         <form style="text-align: center; font-family: 'Playfair Display', serif" action = "submit" method="post"> {% csrf_token %}
+                <input type="text" name ="email">
+                <input type = "submit" value = "Submit">
+         </form>
+    </div>
+
+</body>
+</html>
